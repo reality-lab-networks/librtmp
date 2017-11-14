@@ -27,7 +27,7 @@ parseurl.c
 rtmp.c
 )
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wuninitialized -Wno-deprecated -Wno-unused-const-variable")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC -DUSE_GNUTLS -Wuninitialized -Wno-deprecated -Wno-unused-const-variable")
 
 add_library(librtmp_static STATIC ${LIBRTMP_SOURCES} ${LIBRTMP_HEADERS})
 
