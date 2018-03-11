@@ -72,11 +72,13 @@ void RTMP_LogSetOutput(FILE *file) {
 }
 
 void RTMP_LogSetLevel(RTMP_LogLevel level) {
-    RTMP_debuglevel = level;
+    RTMP_Log(RTMP_LOGWARNING, "%s() Not supported in this version of librtmp because gstreamer is abusing it, ignoring call", __FUNCTION__);
+    //RTMP_debuglevel = level;
 }
 
 void RTMP_LogSetCallback(RTMP_LogCallback *cbp) {
-    cb = cbp;
+    RTMP_Log(RTMP_LOGWARNING, "%s() Not supported in this version of librtmp because gstreamer is abusing it, ignoring call", __FUNCTION__);
+    //cb = cbp;
 }
 
 RTMP_LogLevel RTMP_LogGetLevel() {
